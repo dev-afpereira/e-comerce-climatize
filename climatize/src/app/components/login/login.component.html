@@ -1,0 +1,21 @@
+<div class="login-container">
+  <h2>Regista-te ou Junta-te à Climatize</h2>
+  <p>Por favor, coloca o teu email para entrar ou regista-te para te tornares membro.</p>
+
+  <div class="card" style="width: 300px; margin-right: auto; margin-left: auto;">
+    <form (submit)="login()">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" required class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">Entrar</button>
+    </form>
+    <button (click)="loginWithGoogle()" class="btn btn-google">Entrar com Google</button>
+    <a href="/" class="cancel-button">Cancelar</a>
+  </div>
+</div>
+

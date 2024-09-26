@@ -1,0 +1,30 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('assets/images/recomendados/your-background-image.jpg'); /* Imagem de fundo */
+    background-size: cover;
+    color: white;
+  }
+  
+  .card {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .btn-google {
+    background-color: #db4437;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  .cancel-button {
+    display: block;
+    margin-top: 10px;
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  

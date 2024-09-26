@@ -1,0 +1,39 @@
+<div class="register-page">
+  <!-- Botão de Cancelar -->
+  <div class="cancel-button">
+    <a routerLink="/" class="cancel-link">
+      <span class="back-arrow">&larr;</span> Cancelar
+    </a>
+  </div>
+
+  <!-- Card de Registro -->
+  <div class="register-card">
+    <h2>Junte-se à Climatize</h2>
+    <p>Por favor, coloque seu email para registrar-se e tornar-se membro.</p>
+
+    <form (submit)="register()">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" required />
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" required />
+      </div>
+
+      <div class="form-group">
+        <input type="checkbox" id="privacy" required />
+        <label for="privacy">Aceito a <a href="#">Política de Privacidade</a></label>
+      </div>
+
+      <button type="submit" class="btn-submit">Registrar-se</button>
+    </form>
+
+    <button (click)="registerWithGoogle()" class="btn-google">
+      Registrar-se com Google
+    </button>
+
+    <p>Já tem uma conta? <a routerLink="/login">Faça login</a></p>
+  </div>
+</div>

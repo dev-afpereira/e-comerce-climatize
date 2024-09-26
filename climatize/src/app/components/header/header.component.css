@@ -1,0 +1,91 @@
+/* Navbar fixa e ajustada */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease, box-shadow 0.3s ease;
+    padding: 0; /* Remover o padding adicional */
+  }
+  
+  /* Ajuste a altura da navbar */
+  .navbar {
+    height: 70px; /* Defina a altura da navbar */
+    padding: 0; /* Remover o padding adicional para tornar a navbar mais estreita */
+  }
+  
+  /* Ajuste a altura dos itens dentro da navbar */
+  .navbar .navbar-nav .nav-link,
+  .navbar .navbar-brand,
+  .navbar .d-flex a {
+    height: 70px; /* Alinhe os itens com a altura da navbar */
+    line-height: 50px; /* Centraliza verticalmente o texto */
+  }
+  
+  /* Ajuste da altura do logo */
+  .navbar .navbar-brand img {
+    height: 50px; /* Ajuste o tamanho do logo */
+  }
+  
+  /* Adiciona sombra maior ao rolar para baixo */
+  .navbar-scrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra mais forte quando rola */
+  }
+   
+  
+  /* Estilo dos links e dropdown */
+  .nav-link.dropdown-toggle::after {
+    display: none;
+  }
+  .navbar-brand {
+    flex: 5;
+    text-align: center;
+  }
+  .nav-link {
+    text-transform: uppercase;
+    text-decoration: none; /* Remove sublinhado */
+  }
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  .dropdown-item {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+  }
+  .dropdown-item:hover {
+    text-decoration: underline;
+    color: inherit;
+  }
+  .dropdown-item:focus, 
+  .dropdown-item:active {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  /* Mostrar dropdown ao passar o mouse */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+  }
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    z-index: 1000;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .dropdown-menu.show {
+    display: block;
+  }
+  
+  .navbar-nav a {
+    cursor: pointer;
+  }
+  

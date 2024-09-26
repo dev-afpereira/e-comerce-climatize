@@ -1,0 +1,20 @@
+<div class="container mt-4">
+    <h1>Loja</h1>
+    <h2>Categorias</h2>
+    <ul class="list-group">
+      <li *ngFor="let categoria of categorias" class="list-group-item">
+        <h3>{{ categoria.nome }}</h3>
+        <ul>
+          <li *ngFor="let marca of categoria.marcas">
+            <strong>{{ marca.nome }}</strong>
+            <ul>
+              <li *ngFor="let modelo of marca.modelos">
+                {{ modelo }}
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,193 @@
+/* Correção da definição duplicada de .carousel-caption */
+.carousel-caption {
+  position: absolute;
+  bottom: 10%; /* Posiciona o conteúdo 10% acima da parte inferior da imagem */
+  left: 5%;
+  max-width: 40%; /* Limita a largura do conteúdo da legenda */
+  color: white;
+  text-align: left;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Sombra para melhorar a legibilidade */
+}
+
+.carousel-caption .carousel-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.carousel-caption .carousel-description {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* Correção do tamanho da imagem do carrossel */
+.carousel-item img {
+  width: 100%;
+  min-height: 600px; /* Mantém um mínimo de altura */
+  object-fit: cover; /* Garante que a imagem não se distorça */
+}
+
+/* Remover setas de navegação, mas mostrar ao passar o mouse */
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+  opacity: 1; /* Mostra as setas ao passar o mouse */
+}
+
+/* Box-shadow e borda para o carrossel */
+.shadow-carousel {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Botão de ação do carrossel */
+.btn-carousel {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 12px 24px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-carousel:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra ao passar o mouse */
+}
+
+/* Estilo base dos cards */
+.custom-card {
+  background-color: #f9f9f9;
+  min-height: 100%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões */
+.btn-recommended, .btn-novidades {
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-recommended {
+  background-color: transparent;
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  transition: all 0.3s ease;
+}
+
+.btn-recommended:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-novidades {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-novidades:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  overflow: hidden;
+  max-height: 600px; /* Aumenta a altura máxima do banner */
+}
+
+.banner video {
+  width: 100%;
+  height: 100%; /* O vídeo agora ocupa 100% da altura do contêiner */
+  object-fit: cover; /* Mantém a proporção correta */
+}
+
+.banner-content {
+  background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+  color: white;
+  padding: 20px;
+  position: absolute;
+  bottom: 10%; /* Ajusta a posição do conteúdo do banner */
+  left: 20px;
+  z-index: 10;
+}
+
+.banner-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+}
+
+/* Novidades */
+.novidades h1 {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  font-size: 4rem;
+  padding-left: 20px;
+}
+/* Define o tamanho fixo dos cards */
+/* Estilos aplicados apenas aos cards da classe custom-product-card */
+.custom-product-card {
+  width: 100%;
+  height: 540px; /* Altura fixa do card */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Centraliza a imagem e garante que ela ocupe todo o espaço do card */
+.custom-product-card .img-container {
+  width: 100%;
+  height: 100%; /* Garante que a imagem ocupe todo o card */
+  display: flex;
+}
+
+.custom-product-card .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha o card sem distorção */
+  object-position: center; /* Centraliza a imagem */
+}
+
+/* Posiciona o conteúdo na parte inferior do card */
+.custom-product-card .card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para melhorar a legibilidade */
+  color: white;
+  width: 100%;
+  text-align: left; /* Mantém o alinhamento à esquerda */
+}
+
+/* Tamanho e espaçamento do texto */
+.custom-product-card .card-title {
+  font-size: 1.5rem;
+}
+
+.custom-product-card .card-text {
+  margin-bottom: 0.5rem;
+}
